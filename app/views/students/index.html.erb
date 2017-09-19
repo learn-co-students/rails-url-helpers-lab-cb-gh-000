@@ -1,5 +1,21 @@
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+  <div><%= link_to student.to_s, student_path(student) %></div>
+
+    <!-- <div><%= link_to student.to_s, student_path(student.id) %></div> -->
+    <!-- better version of below -->
+
+    <!-- <div><%= link_to student.to_s, "/students/#{student.id}" %></div> -->
+    <!-- link with full name -->
+
+    <!-- <div><%= link_to student.first_name, "/students/#{student.id}" %></div>  -->
+    <!-- link with just the first name  -->
+
+    <!-- <div><%= student.first_name + " " + student.last_name %></div> -->
   <% end %>
 </div>
+
+<!-- On the student index page, test out all three different link_to argument options, e.g.:
+link_to "post","/post/#{post.id}",
+link_to("post", post_path(post.id)),
+link_to("post", post_path(post)). -->
