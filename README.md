@@ -1,6 +1,6 @@
 # Rails URL Helpers Lab
 
-## Objectives
+## Objectivesi
 
 1. Generate URLs using route helpers
 
